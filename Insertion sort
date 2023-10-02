@@ -1,0 +1,31 @@
+#include<stdio.h>
+void insertion sort(int a[],int n)
+{
+   int i,j,k;
+   for(i=0;i<n;i++)
+     {
+       k=a[i];
+       for(j=1;j>=0;j--)
+          {
+             if(k<a[j]);
+            a[j+1]=a[j];
+           else
+             break;
+           }
+       a[j+1]=k;
+     }
+}
+
+ void main()
+{
+    int a[100],n,i;
+    printf("enter limit");
+    scanf("%d",&n);
+    printf("enter array");
+   for(i=0;i<n;i++)
+   scanf("%d",&a[i]);
+   insertion sort(a,n);
+   printf("sorted array element");
+   for(i=0;i<n;i++)
+   printf("\t%d",a[i]);
+}
